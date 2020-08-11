@@ -12,7 +12,7 @@ app.use(function (req, res, next) {
   const serverLog = `${dateString} | ${reqType} from ${reqURL}`
   res.on('finish', () => {
     const durationInMilliseconds = getDurationInMilliseconds(start)
-    console.log(`${serverLog} | ${durationInMilliseconds.toLocaleString()} ms`)
+    console.log(`${serverLog} | total time: ${durationInMilliseconds.toLocaleString()} ms`)
   })
   next()
 })
